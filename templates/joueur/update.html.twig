@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello JoueurController!{% endblock %}
+
+{% block body %}
+<div class="section">
+    <h2>Modifier le joueur : {{ joueur.id }}</h2>
+    <div>
+        {{ form(joueurform) }}
+    </div>
+</div>
+{% endblock %}

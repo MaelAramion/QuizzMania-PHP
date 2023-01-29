@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+    <div class="section profile">
+        <h1>Votre profil</h1>
+        <p>{{ joueur.prenom }} {{ joueur.nom }}</p>
+        <p>Points de vie : {{ joueur.hp }}</p>
+    </div>
+
+    <svg class="profile-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#3498db" fill-opacity="1"
+              d="M0,128L1440,160L1440,320L0,320Z"></path>
+    </svg>
+    <div class="note-list">
+        <div class="note-content section">
+            <h2>Liste des notes obtenues</h2>
+            <div class="form-field">
+                <form method="post" name="note" class="form-note">
+                    {{ form_label(noteform.note) }}
+                    {{ form_widget(noteform.note, {'attr': {'max': '20', 'min' : '0'}}) }}
+                    {{ form_label(noteform.matiere, 'Matière') }}
+                    {{ form_widget(noteform.matiere) }}
+                    {{ form_widget(noteform.valider, {'attr': {'value': 'Envoyer'}}) }}
+                    {{ form_row(noteform._token) }}
+                    <span class="add-message">{{ (ajout) ? 'Ajouté' : '' }}</span>
+                </form>
+            </div>
+
+            <table class="note-table">
+                <tr>
+                    <th>Matière</th>
+                    <th>Note/20</th>
+                </tr>
+                {% for note in joueur.notes %}
+                    <tr>
+                        <td>{{ note.matiere.libelle }}</td>
+                        <td>{{ note.note }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

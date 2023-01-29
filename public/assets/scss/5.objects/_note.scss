@@ -1,0 +1,23 @@
+.note-list {
+	grid-column: 1/7;
+	background: $blue-3;
+	padding-bottom: 7rem;
+}
+
+.note-content {
+	margin-top: -15rem;
+}
+
+.note-content h2 {
+	font-size: 5rem;
+}
+.note-table {
+	text-align: center;
+	border-collapse: collapse;
+	margin: 3rem auto auto auto;
+	width: 50%;
+}
+
+.note-table th {
+	background: $blue-4;
+}

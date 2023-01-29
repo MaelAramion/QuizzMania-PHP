@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="formulaire">
+        {{ form_start(registrationForm) }}
+        <div class="formulaire_input">
+            <h1>S'enregistrer</h1>
+            {{ form_label(registrationForm.username, 'Nom d\'utilisateur') }}
+            {{ form_widget(registrationForm.username) }}
+
+            {{ form_label(registrationForm.plainPassword, 'Mot de passe') }}
+            {{ form_widget(registrationForm.plainPassword) }}
+
+            {{ form_label(registrationForm.prenom, 'Prénom') }}
+            {{ form_widget(registrationForm.prenom) }}
+
+            {{ form_label(registrationForm.nom, 'Nom') }}
+            {{ form_widget(registrationForm.nom) }}
+
+            <div class="register-checkbox-container">
+                {{ form_label(registrationForm.agreeTerms, 'Accepter les termes') }}
+                {{ form_widget(registrationForm.agreeTerms, { 'attr' : { 'class' : 'register-checkbox' } }) }}
+            </div>
+
+            <button type="submit" class="btn">
+                S'enregistrer
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </button>
+        </div>
+        {{ form_end(registrationForm) }}
+    </div>
+
+{% endblock %}

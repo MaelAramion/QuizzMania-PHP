@@ -1,0 +1,23 @@
+.defi{
+	background: $blue-3;
+	grid-column: 1/7;
+	padding-bottom: 25rem !important;
+	&-svg{
+		grid-column: 1/7;
+		background: $blue-1;
+	}
+	table, td, th{
+		border-collapse: collapse;
+		padding: 1rem;
+		text-align: center;
+	}
+	th{
+		background: $blue-4;
+	}
+	&-select{
+		width: 60rem;
+	}
+	&-input-container{
+		margin-bottom: 2rem;
+	}
+}

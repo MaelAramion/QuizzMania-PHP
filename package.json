@@ -1,0 +1,19 @@
+{
+  "name": "quizzmania",
+  "version": "1.0.0",
+  "description": "symfony project quizzmania",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run sass",
+    "sass": "sass --watch --update public/assets/scss/main.scss:public/assets/css/style.css"
+  },
+  "author": "Mael Aramion",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.54.3"
+  }
+}

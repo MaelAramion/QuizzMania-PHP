@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <div class="section homeSection">
+        <div class="profile-list d-flex flex-row flex-wrap">
+            {% for joueur in joueurs %}
+                {% set position = 1 %}
+                {% if joueur.username != 'admin' %}
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <h3>{{ joueur.username }}</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 350">
+                                <path fill="#1368A1" fill-opacity="1" d="M0,256L1440,160L1440,320L0,320Z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="profile-info">
+                            <p>{{ joueur.prenom }}</p>
+                            <p>{{ joueur.nom }}</p>
+                            <p>HP : {{ joueur.hp }}</p>
+                        </div>
+
+                        <div class="profile-rank">
+                            <p>#{{ position }}</p>
+                        </div>
+                    </div>
+
+                {% endif %}
+
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

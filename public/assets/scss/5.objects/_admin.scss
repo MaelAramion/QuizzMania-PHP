@@ -1,0 +1,71 @@
+.admin{
+	display: flex;
+	&-input-container{
+		margin-bottom: 2rem;
+		display: flex;
+		align-items: center;
+		input[type="text"]{
+			width: 100% !important;
+		}
+		input[type="number"]{
+			width: 10%;
+		}
+		ul{
+			list-style: none;
+			width: 100%;
+			padding: 0;
+		}
+		button{
+			margin: auto !important;
+		}
+	}
+	&-form{
+		width: 50% !important;
+		h2{
+			text-align: center !important;
+		}
+		.reponse-list{
+			//border: 2px solid white !important;
+			//padding: 0 2rem;
+			//border-radius: 1rem;
+		}
+	}
+	&-question{
+		background: #3498db;
+		padding-bottom: 20rem !important;
+		table, td, th{
+			border-collapse: collapse;
+		}
+		table{
+			width: 100%;
+		}
+		th{
+			background: $blue-4;
+			text-align: center;
+		}
+		td{
+			text-align: center;
+		}
+	}
+	&-svg{
+		margin-top: -20rem;
+		grid-column: 1/7;
+	}
+	&-utilisateur{
+		padding-bottom: 20rem !important;
+		table, td, th{
+			border-collapse: collapse;
+		}
+		table{
+			width: 100%;
+		}
+		th{
+			background: $blue-4;
+			text-align: center;
+		}
+		td {
+			text-align: center;
+		}
+	}
+
+}

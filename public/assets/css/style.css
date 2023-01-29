@@ -1,0 +1,396 @@
+/* Settings */
+@font-face {
+  font-family: font1;
+  src: url("../fonts/font.ttf");
+} /* Tools */
+/* -------------------------------------- Import mixin here -------------------- */
+/* Generic */
+/* ---------------------- Import normalize here ------------------------------ */
+/* Elements */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+body {
+  background: #2980b9;
+}
+
+.content {
+  font-family: font1, sans-serif;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #2ED7F2;
+}
+
+/* Objects */
+.profile {
+  z-index: 2;
+}
+
+.profile-card {
+  width: 30rem;
+  margin: 2rem 2rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-list {
+  margin: auto;
+  justify-content: center;
+}
+
+.profile-header {
+  background: #3498db;
+  height: 13rem;
+}
+
+.profile-info {
+  background: #1368A1;
+  padding-bottom: 3rem;
+}
+
+.profile-info p {
+  margin: 0;
+  padding: 1rem;
+}
+
+.profile-card h3 {
+  margin: 0;
+  padding: 1rem 1rem;
+}
+
+.profile-rank {
+  background: #1368A1;
+  position: absolute;
+  width: auto;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 2rem;
+}
+
+.profile-rank p {
+  padding: 1rem;
+  margin: 0;
+}
+
+.profile-svg {
+  grid-column: 1/7;
+}
+
+.note-list {
+  grid-column: 1/7;
+  background: #3498db;
+  padding-bottom: 7rem;
+}
+
+.note-content {
+  margin-top: -15rem;
+}
+
+.note-content h2 {
+  font-size: 5rem;
+}
+
+.note-table {
+  text-align: center;
+  border-collapse: collapse;
+  margin: 3rem auto auto auto;
+  width: 50%;
+}
+
+.note-table th {
+  background: #1368A1;
+}
+
+.defi {
+  background: #3498db;
+  grid-column: 1/7;
+  padding-bottom: 25rem !important;
+}
+.defi-svg {
+  grid-column: 1/7;
+  background: #2980b9;
+}
+.defi table, .defi td, .defi th {
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: center;
+}
+.defi th {
+  background: #1368A1;
+}
+.defi-select {
+  width: 60rem;
+}
+.defi-input-container {
+  margin-bottom: 2rem;
+}
+
+.admin {
+  display: flex;
+}
+.admin-input-container {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+.admin-input-container input[type=text] {
+  width: 100% !important;
+}
+.admin-input-container input[type=number] {
+  width: 10%;
+}
+.admin-input-container ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+.admin-input-container button {
+  margin: auto !important;
+}
+.admin-form {
+  width: 50% !important;
+}
+.admin-form h2 {
+  text-align: center !important;
+}
+.admin-question {
+  background: #3498db;
+  padding-bottom: 20rem !important;
+}
+.admin-question table, .admin-question td, .admin-question th {
+  border-collapse: collapse;
+}
+.admin-question table {
+  width: 100%;
+}
+.admin-question th {
+  background: #1368A1;
+  text-align: center;
+}
+.admin-question td {
+  text-align: center;
+}
+.admin-svg {
+  margin-top: -20rem;
+  grid-column: 1/7;
+}
+.admin-utilisateur {
+  padding-bottom: 20rem !important;
+}
+.admin-utilisateur table, .admin-utilisateur td, .admin-utilisateur th {
+  border-collapse: collapse;
+}
+.admin-utilisateur table {
+  width: 100%;
+}
+.admin-utilisateur th {
+  background: #1368A1;
+  text-align: center;
+}
+.admin-utilisateur td {
+  text-align: center;
+}
+
+/* Components */
+.formulaire {
+  grid-column: 3/5;
+}
+
+.formulaire form {
+  margin: auto;
+}
+
+.formulaire_input label {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.formulaire_input input {
+  display: block;
+  margin-bottom: 1.5rem;
+  height: 3rem;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 2rem;
+  font-family: font1, sans-serif;
+}
+
+.formulaire_input input:focus {
+  border: none;
+}
+
+.formulaire_input button {
+  font-size: 2rem;
+  font-family: font1, sans-serif;
+  border: none;
+  background: white;
+  margin-top: 4rem;
+  border-radius: 0.5rem;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem 1rem;
+}
+
+.formulaire_input button:hover {
+  cursor: pointer;
+}
+
+.formulaire_input button:hover {
+  background: #2ED7F2;
+}
+
+.formulaire_input {
+  display: flex;
+  flex-direction: column;
+  font-family: font1, sans-serif;
+  color: white;
+}
+
+.connected {
+  font-size: 2rem;
+  margin-top: 4rem;
+}
+
+.formulaire_input h1 {
+  font-size: 4rem;
+}
+
+.form-field {
+  margin: auto;
+}
+
+.form-field input {
+  height: 2rem;
+  font-size: 2.5rem;
+  font-family: font1, sans-serif;
+  margin: 1rem 1rem;
+  padding: 1rem 1rem;
+  width: 6rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+.form-field select {
+  font-size: 2.5rem;
+  font-family: font1, sans-serif;
+  margin: 0 1rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+.form-field button {
+  font-size: 2.5rem;
+  font-family: font1, sans-serif;
+  padding: 0 2rem;
+  background-color: white;
+  border: none;
+  border-radius: 1rem;
+}
+
+.form-field button:hover {
+  background: #2ED7F2;
+  cursor: pointer;
+}
+
+.register-label {
+  width: auto;
+}
+
+.register-checkbox {
+  margin: 0;
+  height: 3rem;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 2rem;
+}
+
+.register-checkbox-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.brand {
+  font-size: 4rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background: #3498db;
+  font-size: 2rem;
+  padding: 0 2rem;
+  align-items: center;
+  grid-column: 1/7;
+  flex-wrap: wrap;
+}
+
+.navbar svg {
+  display: block;
+}
+
+.navbar-links {
+  margin-left: auto;
+}
+
+.menu-link {
+  display: inline;
+  margin: 0 2rem;
+}
+
+/* Utilities */
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.section {
+  grid-column: 1/7;
+  padding: 3rem 10rem;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.special-link {
+  color: #2ED7F2;
+}
+
+.special-link:hover {
+  color: #2CE8CF;
+  transition: all 0.5s;
+}
+
+.icon {
+  margin-left: 0.5rem;
+}
+
+.error {
+  color: #c0392b;
+}
+
+/*# sourceMappingURL=style.css.map */

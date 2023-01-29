@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <div class="section">
+
+        <div class="form-field">
+            <h1>Défier un joueur</h1>
+
+            <p class="error">{{ (erreur != "") ? erreur }}</p>
+
+            {{ form_start(defiform) }}
+
+            <div class="defi-input-container">
+                {{ form_label(defiform.joueur_destinataire,'Joueur défié') }}
+                {{ form_widget(defiform.joueur_destinataire) }}
+            </div>
+
+            <div class="defi-input-container">
+                {{ form_label(defiform.question, 'Question posée') }}
+                {{ form_widget(defiform.question, { 'attr' : {'class' : 'defi-select'}}) }}
+            </div>
+
+            <div class="defi-input-container">
+                {{ form_label(defiform.limit_date, 'Date limite pour répondre') }}
+                {{ form_widget(defiform.limit_date) }}
+            </div>
+
+
+            {{ form_row(defiform._token) }}
+
+            {{ form_end(defiform) }}
+        </div>
+    </div>
+
+    <svg class="defi-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+        <path fill="#3498db" fill-opacity="1"
+              d="M0,128L1440,160L1440,320L0,320Z"></path>
+    </svg>
+
+    <div id="repondre" class="defi section">
+        <h1>Liste des défis</h1>
+        <table>
+            <tr>
+                <th>Lancé par</th>
+                <th>Question posée</th>
+                <th>Action</th>
+            </tr>
+            {% for defi in defis %}
+                <tr>
+                    <td>{{ defi.joueurorigin }}</td>
+                    <td>{{ defi.question.intitule }}</td>
+                    <td><a class="btn-repondre" href="/defi/repondre/{{ defi.id }}">Répondre</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+
+{% endblock %}

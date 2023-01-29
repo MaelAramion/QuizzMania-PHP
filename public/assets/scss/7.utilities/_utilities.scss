@@ -1,0 +1,33 @@
+.d-flex {
+	display: flex;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+.section {
+	grid-column: 1/7;
+	padding: 3rem 10rem;
+	font-size: 2.5rem;
+	display: flex;
+	flex-direction: column;
+}
+.special-link {
+	color: $blue-2;
+}
+
+.special-link:hover {
+	color: $blue-5;
+	transition: all 0.5s;
+}
+.icon {
+	margin-left: 0.5rem;
+}
+.error{
+	color: $red-1;
+}

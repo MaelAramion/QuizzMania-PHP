@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <div class="section">
+        <h1>Répondre au défi</h1>
+        <form name="reponseform" action="/defi/submit/{{ defi.id }}" method="POST">
+            <h2>{{ question.intitule }}</h2>
+            <ul>
+                {% for reponse in reponses %}
+                    <li>
+                        {{ reponse.reponse }}
+                        <input required name="reponse" type="radio" value="{{ reponse.id }}"/>
+                    </li>
+                {% endfor %}
+            </ul>
+            <input type="submit" value="Valider"/>
+        </form>
+    </div>
+{% endblock %}

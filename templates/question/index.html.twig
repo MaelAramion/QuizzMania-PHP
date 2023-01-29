@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello QuestionController!{% endblock %}
+
+{% block body %}
+
+    <div class="section">
+        <div class="form-field admin-form">
+            <h2>Ajouter de nouvelles questions</h2>
+            {{ form_start(questionform) }}
+            <div class="admin-input-container">
+                {{ form_label(questionform.intitule,'Intitulé') }}
+                {{ form_widget(questionform.intitule) }}
+            </div>
+            <div class="admin-input-container">
+                {{ form_label(questionform.points, 'Points') }}
+                {{ form_widget(questionform.points) }}
+            </div>
+            <div class="admin-input-container reponse-list">
+                <ul id="reponses-fields-list" class="reponses"
+                    data-prototype="{{ form_widget(questionform.reponses.vars.prototype)|e('html_attr') }}"
+                    data-widget-tags="{{ '<li></li>'|e }}"
+                    data-widget-counter="{{ questionform.reponses|length }}">
+                    {% for reponse in questionform.reponses %}
+                        <li>
+                            <div>
+                                <div class="admin-input-container">
+                                    {{ form_label(reponse.reponse, 'Réponse') }}
+                                    {{ form_widget(reponse.reponse) }}
+                                </div>
+                                <div class="admin-input-container">
+                                    {{ form_label(reponse.isValid, 'Bonne réponse') }}
+                                    {{ form_widget(reponse.isValid) }}
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="admin-input-container">
+                <button type="button"
+                        class="add-another-collection-widget admin-input-container"
+                        data-list-selector="#reponses-fields-list">Ajouter une réponse
+                </button>
+            </div>
+
+            <div class="admin-input-container">
+                {{ form_widget(questionform.valider) }}
+            </div>
+
+            {{ form_end(questionform) }}
+        </div>
+    </div>
+
+
+    <script src="{{ asset("assets/js/jquery.js") }}"></script>
+    <script src="{{ asset("assets/js/main.js") }}"></script>
+
+{% endblock %}

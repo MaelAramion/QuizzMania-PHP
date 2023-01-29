@@ -1,0 +1,53 @@
+.profile {
+	z-index: 2;
+}
+
+.profile-card {
+	width: 30rem;
+	margin: 2rem 2rem;
+	border-radius: 2rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.profile-list {
+	margin: auto;
+	justify-content: center;
+}
+
+.profile-header {
+	background: $blue-3;
+	height: 13rem;
+}
+
+.profile-info {
+	background: $blue-4;
+	padding-bottom: 3rem;
+}
+
+.profile-info p {
+	margin: 0;
+	padding: 1rem;
+}
+
+.profile-card h3 {
+	margin: 0;
+	padding: 1rem 1rem;
+}
+
+.profile-rank {
+	background: $blue-4;
+	position: absolute;
+	width: auto;
+	top: 0;
+	right: 0;
+	border-bottom-left-radius: 2rem;
+}
+
+.profile-rank p {
+	padding: 1rem;
+	margin: 0;
+}
+.profile-svg {
+	grid-column: 1/7;
+}

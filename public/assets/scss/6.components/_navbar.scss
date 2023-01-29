@@ -1,0 +1,27 @@
+.brand {
+	font-size: 4rem;
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	background: $blue-3;
+	font-size: 2rem;
+	padding: 0 2rem;
+	align-items: center;
+	grid-column: 1/7;
+	flex-wrap: wrap;
+}
+
+.navbar svg {
+	display: block;
+}
+
+.navbar-links {
+	margin-left: auto;
+}
+
+.menu-link {
+	display: inline;
+	margin: 0 2rem;
+}
